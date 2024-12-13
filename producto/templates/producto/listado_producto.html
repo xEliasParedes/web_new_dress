@@ -1,0 +1,328 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>categoria| Patitas.cl</title>
+
+  <link rel="icon" type="image/x-icon" href="{% static 'img/logo/logo.png'%}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="{%static 'producto/css/styles.css'%}">
+</head>
+
+<body>
+  <header id="cabecera">
+    <h1 id="titulo">Bienvenido a Tienda Patitas</h1>
+    <nav class="nav_" id="nav">
+      <ul class="list">
+
+        <div class="nav_fila" id="na1">
+          <div class="nav_column" id="n1">
+            <li class="list__logo">
+              <div class="list__button" id="logotipo">
+                <a href="{%url 'index'%}" id="logo_hv"><img src="{% static 'producto/img/logo/d2204d754ef6a0a357026981a99022e4.jpg'%}" alt="logo" class="logo_img" /></a>
+                
+              </div>
+            </li>
+
+            <li class="list__item" id="menu">
+              <div class="list__button ">
+                
+                <label for="code_menu" class="cont_list_item" id="btn_menu">
+                  <h2><i class="bi bi-list" id="icon_menu"></i></h2>
+                  <h6>menu</h6>
+                </label>
+                  
+                <input type="checkbox" class="nav_input" id="code_menu">
+
+                <div class="nav_" id="desplegable">
+                  <ul class="list" id="desplegable_menu">
+                    <li class="group_item_sec">
+                      <div class="title_list_item"><a href="{%url 'list_product'%}">PRODUCTOS... <span>ver todo</span></a></div>
+                      <ul class="group_item">
+                        <li class="item_list"><a href="{%url 'list_product'%}">Alimentos</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Cuidado</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Entretenimiento</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Accesorios</a></li>
+                        <li class="item_list"><a href="{%url 'list_product'%}">Medicamento</a></li>
+                      </ul>
+                    
+                    </li>
+                    <li class="group_item_sec">
+                      <h2 class="title_list_item">INFORMACION</h2>
+                      <ul class="group_item">
+                        <li class="item_list"><a href="#0">preguntas Precuentes</a></li>
+                        <li class="item_list"><a href="#footer">contactanos</a></li>
+                        <li class="item_list"><a href="#0">sucursales</a></li>
+                      </ul>
+                    </li>
+                    
+                  
+                  </ul>
+                  
+                  
+                </div>
+                
+                
+              </div>
+            </li>
+
+          </div>
+
+          <div class="nav_column" id="n2">
+            
+
+            <li class="list__item list__item--click" id="producto_item1">
+              <div class="list__button list__button--click" id="producto_item2">
+                <img src="{% static 'producto/icon/shopping-bag-solid-24.png'%}" alt="productos" class="list__img" />
+                <a href="#" class="nav__link">Productos</a>
+                <img src="{% static 'producto/icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
+              </div>
+    
+              <ul class="list__show">
+                <li class="list__inside">
+                  <a href="{%url 'list_product'%}" class="nav__link nav__link--inside">Alimentos</a>
+                </li>
+    
+                <li class="list__inside">
+                  <a href="{%url 'list_product'%}" class="nav__link nav__link--inside">Cuidados</a>
+                </li>
+    
+                <li class="list__inside">
+                  <a href="{%url 'list_product'%}" class="nav__link nav__link--inside">Accesorios</a>
+                </li>
+    
+                <li class="list__inside">
+                  <a href="{%url 'list_product'%}" class="nav__link nav__link--inside">Farmacia</a>
+                </li>
+              </ul>
+            </li>
+    
+            <li class="list__item list__item--click" id="nosotros_item1">
+              <div class="list__button list__button--click" id="nosotros_item2">
+                <img src="{% static 'producto/icon/info-circle-solid-24.png'%}" alt="Nosotros" class="list__img" />
+                <a  class="nav__link">Nosotros</a>
+                <img src="{% static 'producto/icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
+              </div>
+    
+              <ul class="list__show">
+                <li class="list__inside">
+                  <a href="{%url 'index'%}#p2" class="nav__link nav__link--inside">Mision</a>
+                </li>
+    
+                <li class="list__inside">
+                  <a href="#footer" class="nav__link nav__link--inside">Contacto</a>
+                </li>
+    
+                <li class="list__inside">
+                  <a href="#0" class="nav__link nav__link--inside">FaQ</a>
+                </li>
+              </ul>
+            </li>
+
+
+            <li class="list__login" id="login_item1">
+              <div class="list__button" id="login_item2">
+                <img src="{% static 'producto/icon/usuario-de-perfil.png'%}" alt="Usuario" class="list__img" />
+                <a target="_blank" href="{%url 'login'%}" class="nav__login">Iniciar Sesion</a>
+              </div>
+            </li>
+
+
+            <li class="list__item">
+              <div id="carr_button" class="list__button">
+                <img src="{% static 'producto/icon/carro-de-la-carretilla.png'%}" alt="Carrito" class="list__img" />
+                <button id="boton-carrito">Carrito <span id="contadorCarrito">0</span></button>
+              </div>
+            </li>
+    
+            
+
+          </div>
+        </div>
+
+        <div class="nav_fila" id="na2">
+          <div class="nav_column" id="n3">
+            <li class="buscador" id="buscador">
+              <div class="search_itean">
+                <div class="search">
+                  <form action="#" method="get" id="search">
+                    <input class="buscar" type="text" name="buscador" id="search" placeholder="Buscador..." />
+                    <button type="submit" id="lupa"><i class="bi bi-search"></i></button>
+                  </form>
+                </div>
+              </div>
+            </li>
+
+          </div>
+          
+
+        </div>
+
+
+        
+
+        
+
+        
+      </ul>
+    </nav>
+
+    
+
+  </header>
+
+
+  <section id="sec_carr" class="sec_principal">
+
+    <div class="contenedor_filtro">
+      <ul class="filtro_list">
+        <li class="filtro__item filtro">
+          <div class="list__button list__button--click">
+            <a href="#0" class="nav__link">PRECIO</a>
+            <img src="{% static 'producto/icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
+          </div>
+
+          <ul class="filtro__show">
+            <li class="filtro__inside">
+              <a href="">recomendado</a>
+
+            </li>
+
+
+          </ul>
+        </li>
+
+        <li class="filtro__item filtro">
+          <div class="list__button list__button--click">
+            <a href="#0" class="nav__link">TIPO DE PRODUCTO</a>
+            <img src="{% static 'producto/icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
+          </div>
+
+          <ul class="filtro__show">
+            <li class="filtro__inside">
+              <a href="">Consumible</a>
+            </li>
+
+            <li class="filtro__inside">
+              <a href="">Cuidados</a>
+            </li>
+
+            <li class="filtro__inside">
+              <a href="">Entretenimiento</a>
+            </li>
+
+            <li class="filtro__inside">
+              <a href="">Accesorios</a>
+            </li>
+
+            <li class="filtro__inside">
+              <a href="">Farmacia</a>
+            </li>
+
+
+          </ul>
+        </li>
+
+        <li class="filtro__item filtro">
+          <div class="list__button list__button--click">
+            <a href="#0" class="nav__link">MARCA</a>
+            <img src="{% static 'producto/icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
+          </div>
+
+          <ul class="filtro__show">
+            <li class="filtro__inside">
+              <a href="">recomendado</a>
+
+            </li>
+
+
+          </ul>
+        </li>
+
+        <li class="filtro__item filtro">
+          <div class="list__button list__button--click">
+            <a href="#0" class="nav__link">PUNTUACION</a>
+            <img src="{% static 'producto/icon/chevron-right-regular-24.png'%}" alt="cerrado" class="list__arrow" />
+          </div>
+
+          <ul class="filtro__show">
+            <li class="filtro__inside">
+              <a href="">recomendado</a>
+
+            </li>
+
+
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+
+
+    <div class="contenedor_productos">
+      <div id="list_product_scroll" class="list_product_scroll">
+
+      </div>
+    </div>
+
+
+    <div class="modal-contenedor">
+      <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+        <div id="carrito-contenedor">
+
+        </div>
+        <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+        <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        <button id="continuar-carrito" class="boton-agregar">continuar</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer id="footer">
+    <div class="contenedor">
+
+
+      <div class="columna">
+        <h3 class="title_footer">Contacto</h3>
+        <hr>
+        <h5 class="body_footer">Telefono: <a href="tel:+" class="hv_footer">+569 727 245 57</a></h5>
+        <h5 class="body_footer">Email: <a href="mailto:" class="hv_footer">el.paredes@duocuc.cl</a></h5>
+      </div>
+      <div class="columna">
+        <h3 class="title_footer">Enlaces</h3>
+        <hr>
+        <h5 class="body_footer">Instagram: <a href="http://Instagram.com" target="_blank" rel="noopener noreferrer"
+            class="hv_footer">@PatitasShop</a></h5>
+        <h5 class="body_footer">Facebook: <a href="http://Facebook.com" target="_blank" rel="noopener noreferrer"
+            class="hv_footer">PatitasShop</a></h5>
+      </div>
+
+      <div class="columna">
+        <h4 class="title_footer">copyright 2023</h4>
+        <hr>
+      </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+  <script src="{% static 'producto/js/listado_producto.js'%}"></script>
+  <script defer src="{% static 'producto/js/stock.js'%}"></script>
+  <script defer src="{% static 'producto/js/modal.js'%}"></script>
+  <script defer src="{% static 'producto/js/product_list_app.js'%}"></script>
+  
+  
+
+</body>
+
+</html>

@@ -16,9 +16,9 @@ body {
   background: #f3d1ff;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to top,
-      #ffe6f2,
-      #f3d1ff, 
-      #fffacc);
+      #efc5ff,
+      #f497c4,       
+      #fff8b5);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top,
       #ffe6f2,

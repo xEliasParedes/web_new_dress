@@ -16,15 +16,17 @@
 
 /*!  -----------------------------Fondo---------------------------------*/
 body {
-  background: #e77e23;
+  background: #f3d1ff;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to top,
-      #f7bf18,
-      #e77e23);
+      #ffe6f2,
+      #f3d1ff, 
+      #fffacc);
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top,
-      #f7bf18,
-      #e77e23);
+      #ffe6f2,
+      #f3d1ff, 
+      #fffacc);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   background-attachment: fixed;
@@ -51,7 +53,7 @@ body {
 
 #titulo {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: #303440;
+  background-color: #9b56b6;
   color: white;
   width: 100%;
   padding: 20px;

@@ -1,0 +1,24 @@
+python -m venv ENTORNO_VIRTUAL
+cd ENTORNO_VIRTUAL
+cd scripts
+./activate
+cd ..
+cd ..
+pip install -r requirements.txt
+py manage.py runserver
+
+1- Crear el entorno virtual
+python -m venv ENTORNO_VIRTUAL
+
+2- Activar el entorno
+cd ENTORNO_VIRTUAL
+cd scripts
+./activate
+cd ..
+cd ..
+
+3- instalar dependencias y correr la web
+pip install -r requirements.txt
+py manage.py runserver
+
+

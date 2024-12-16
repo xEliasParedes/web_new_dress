@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Dress | Descarga tu armario virtual!</title>
+    <link rel="icon" type="image/x-icon" href="descarga\static\descarga\img\icono.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{% static 'descarga/css/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'descarga/css/animate.css'%}" />
+
+</head>
+
+<body>
+
+
+    <header id="cabecera">
+        <h1 id="titulo">New Dress | ¡Este será tu nuevo armario virtual!</h1>
+    </header>
+    <section id="login" class="sec_principal">
+
+
+        <div class="contenedor_login">
+
+            <img class="logo_img"  src="{% static 'descarga/img/icono.jpg'%}" alt="foto-icono">
+
+            <h1>New Dress</h1>
+
+            <p>New Dress es tu armario digital y red social de moda. Sube tu ropa, crea conjuntos únicos, descubre looks de otros usuarios y conecta con una comunidad que comparte tu estilo.</p>
+            
+            <!-- Botón de descarga -->
+            <button href="{% url 'apk' %}" class="btn btn-primary">DESCARGAR</button>
+
+
+
+            <!-- Código QR para la descarga -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ request.scheme }}://{{ request.get_host }}/descarga-new_dress/&size=200x200"
+                alt="Código QR para descargar APK" />
+
+        </div>
+
+    </section>
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <footer id="footer">
+
+        <div class="contenedor">
+
+            <div class="columna">
+                <h3 class="title_footer">Contacto</h3>
+                <hr>
+                <h5 class="body_footer">Telefono: <a href="tel:+" class="hv_footer">+569 727 245 57</a></h5>
+                <h5 class="body_footer">Email: <a href="mailto:" class="hv_footer">ContactoNewDress@gmail.com</a></h5>
+            </div>
+
+            <div class="columna">
+                <h3 class="title_footer">Enlaces</h3>
+                <hr>
+                <h5 class="body_footer">Instagram: <a href="http://Instagram.com" target="_blank"
+                        rel="noopener noreferrer" class="hv_footer">@NewDress</a></h5>
+                <h5 class="body_footer">Facebook: <a href="http://Facebook.com" target="_blank"
+                        rel="noopener noreferrer" class="hv_footer">NewDress</a></h5>
+            </div>
+
+            <div class="columna">
+                <h4 class="title_footer">copyright 2025</h4>
+                <hr>
+            </div>
+    </footer>
+
+    <script src="{% static 'js/descarga.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

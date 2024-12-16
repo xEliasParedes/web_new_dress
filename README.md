@@ -1,5 +1,3 @@
-# Tienda de Mascota
+# publicidad para New Dress
 
-
-Detalles:  Esta pagina web esta dirigida para personas que tengan una mascota, su principal funcion seria la compra de cuidados, entrenemiento y alimentos
-           para mascota.
+esta pagina esta diseñada para descargar el apk de New Dress
